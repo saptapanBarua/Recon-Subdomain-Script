@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BGREEN='\033[1;32m'
-RESET='\033[0m'
+BGREEN="\033[1;32m"
+RESET="\033[0m"
 
 url=$1
 
@@ -18,7 +18,7 @@ then
 fi
 
 # Hunting start
-echo "[${BGREEN}+${RESET}] Hunting subdomains with assetfinder . . ."
+echo "[${{BGREEN}}+${RESET}] Hunting subdomains with assetfinder . . ."
 assetfinder --subs-only $url >> $url/recon/sub-domains.txt
 echo "${BGREEN}+${RESET}] $(cat $url/recon/sub-domains.txt | wc -l) subdomains were found."
 
